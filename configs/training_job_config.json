@@ -1,0 +1,75 @@
+{
+   "AlgorithmSpecification": {
+      "AlgorithmName": "string",
+      "MetricDefinitions": [
+         {
+            "Name": "string",
+            "Regex": "string"
+         }
+      ],
+      "TrainingImage": "string",
+      "TrainingInputMode": "string"
+   },
+   "CheckpointConfig": {
+      "LocalPath": "string",
+      "S3Uri": "string"
+   },
+   "EnableInterContainerTrafficEncryption": boolean,
+   "EnableManagedSpotTraining": boolean,
+   "EnableNetworkIsolation": boolean,
+   "HyperParameters": {
+      "string" : "string"
+   },
+   "InputDataConfig": [
+      {
+         "ChannelName": "string",
+         "CompressionType": "string",
+         "ContentType": "string",
+         "DataSource": {
+            "FileSystemDataSource": {
+               "DirectoryPath": "string",
+               "FileSystemAccessMode": "string",
+               "FileSystemId": "string",
+               "FileSystemType": "string"
+            },
+            "S3DataSource": {
+               "AttributeNames": [ "string" ],
+               "S3DataDistributionType": "string",
+               "S3DataType": "string",
+               "S3Uri": "string"
+            }
+         },
+         "InputMode": "string",
+         "RecordWrapperType": "string",
+         "ShuffleConfig": {
+            "Seed": number
+         }
+      }
+   ],
+   "OutputDataConfig": {
+      "KmsKeyId": "string",
+      "S3OutputPath": "string"
+   },
+   "ResourceConfig": {
+      "InstanceCount": number,
+      "InstanceType": "string",
+      "VolumeKmsKeyId": "string",
+      "VolumeSizeInGB": number
+   },
+   "RoleArn": "string",
+   "StoppingCondition": {
+      "MaxRuntimeInSeconds": number,
+      "MaxWaitTimeInSeconds": number
+   },
+   "Tags": [
+      {
+         "Key": "string",
+         "Value": "string"
+      }
+   ],
+   "TrainingJobName": "string",
+   "VpcConfig": {
+      "SecurityGroupIds": [ "string" ],
+      "Subnets": [ "string" ]
+   }
+}

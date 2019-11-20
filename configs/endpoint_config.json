@@ -1,0 +1,20 @@
+{
+   "EndpointConfigName": "string",
+   "KmsKeyId": "string",
+   "ProductionVariants": [
+      {
+         "AcceleratorType": "string",
+         "InitialInstanceCount": number,
+         "InitialVariantWeight": number,
+         "InstanceType": "string",
+         "ModelName": "string",
+         "VariantName": "string"
+      }
+   ],
+   "Tags": [
+      {
+         "Key": "string",
+         "Value": "string"
+      }
+   ]
+}

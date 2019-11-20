@@ -1,0 +1,121 @@
+{
+   "HyperParameterTuningJobConfig": {
+      "HyperParameterTuningJobObjective": {
+         "MetricName": "string",
+         "Type": "string"
+      },
+      "ParameterRanges": {
+         "CategoricalParameterRanges": [
+            {
+               "Name": "string",
+               "Values": [ "string" ]
+            }
+         ],
+         "ContinuousParameterRanges": [
+            {
+               "MaxValue": "string",
+               "MinValue": "string",
+               "Name": "string",
+               "ScalingType": "string"
+            }
+         ],
+         "IntegerParameterRanges": [
+            {
+               "MaxValue": "string",
+               "MinValue": "string",
+               "Name": "string",
+               "ScalingType": "string"
+            }
+         ]
+      },
+      "ResourceLimits": {
+         "MaxNumberOfTrainingJobs": number,
+         "MaxParallelTrainingJobs": number
+      },
+      "Strategy": "string",
+      "TrainingJobEarlyStoppingType": "string"
+   },
+   "HyperParameterTuningJobName": "string",
+   "Tags": [
+      {
+         "Key": "string",
+         "Value": "string"
+      }
+   ],
+   "TrainingJobDefinition": {
+      "AlgorithmSpecification": {
+         "AlgorithmName": "string",
+         "MetricDefinitions": [
+            {
+               "Name": "string",
+               "Regex": "string"
+            }
+         ],
+         "TrainingImage": "string",
+         "TrainingInputMode": "string"
+      },
+      "CheckpointConfig": {
+         "LocalPath": "string",
+         "S3Uri": "string"
+      },
+      "EnableInterContainerTrafficEncryption": boolean,
+      "EnableManagedSpotTraining": boolean,
+      "EnableNetworkIsolation": boolean,
+      "InputDataConfig": [
+         {
+            "ChannelName": "string",
+            "CompressionType": "string",
+            "ContentType": "string",
+            "DataSource": {
+               "FileSystemDataSource": {
+                  "DirectoryPath": "string",
+                  "FileSystemAccessMode": "string",
+                  "FileSystemId": "string",
+                  "FileSystemType": "string"
+               },
+               "S3DataSource": {
+                  "AttributeNames": [ "string" ],
+                  "S3DataDistributionType": "string",
+                  "S3DataType": "string",
+                  "S3Uri": "string"
+               }
+            },
+            "InputMode": "string",
+            "RecordWrapperType": "string",
+            "ShuffleConfig": {
+               "Seed": number
+            }
+         }
+      ],
+      "OutputDataConfig": {
+         "KmsKeyId": "string",
+         "S3OutputPath": "string"
+      },
+      "ResourceConfig": {
+         "InstanceCount": number,
+         "InstanceType": "string",
+         "VolumeKmsKeyId": "string",
+         "VolumeSizeInGB": number
+      },
+      "RoleArn": "string",
+      "StaticHyperParameters": {
+         "string" : "string"
+      },
+      "StoppingCondition": {
+         "MaxRuntimeInSeconds": number,
+         "MaxWaitTimeInSeconds": number
+      },
+      "VpcConfig": {
+         "SecurityGroupIds": [ "string" ],
+         "Subnets": [ "string" ]
+      }
+   },
+   "WarmStartConfig": {
+      "ParentHyperParameterTuningJobs": [
+         {
+            "HyperParameterTuningJobName": "string"
+         }
+      ],
+      "WarmStartType": "string"
+   }
+}
